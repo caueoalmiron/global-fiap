@@ -68,6 +68,11 @@ with st.sidebar:
         "IBGE/SIDRA 4709 (Censo 2022)."
     )
 
+    st.caption(
+        "O filtro afeta tabelas e gráficos de barras. A taxa regional, "
+        "as correlações e o gráfico de dispersão usam sempre os 7 municípios."
+    )
+
 
 if not sel:
     st.warning("Selecione ao menos um município.")
@@ -190,8 +195,11 @@ with tabs[1]:
         width="stretch"
     )
 
+    topo = base.loc[base["registros_cnes_por_10mil_hab"].idxmax()]
+
     st.info(
-        "São Caetano do Sul tem taxa muito superior às demais (90,79). "
+        f"{topo['municipio']} tem taxa muito superior às demais "
+        f"({topo['registros_cnes_por_10mil_hab']:.2f}".replace(".", ",") + "). "
         "É um ponto a investigar, não evidência de melhor acesso ou qualidade."
     )
 

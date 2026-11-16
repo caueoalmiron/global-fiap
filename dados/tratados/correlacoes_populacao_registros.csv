@@ -1,0 +1,4 @@
+﻿cenario,n,pearson,p_pearson,spearman,p_spearman
+Todos os registros (7 municípios),7,0.748,0.053,0.893,0.007
+"Todos os registros, sem São Caetano do Sul",6,0.956,0.003,1.0,0.0
+Só registros sem motivo de desabilitação (7 municípios),7,0.786,0.036,0.893,0.007
